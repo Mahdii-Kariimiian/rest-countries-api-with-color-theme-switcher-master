@@ -1,0 +1,256 @@
+/*                      */
+/*        Reset         */
+/*                      */
+
+/* Box sizing */
+
+*,
+*::after,
+*:before {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+    margin: 0;
+}
+
+/* Set up the body */
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+/* make images easier to work with */
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* make form elements easier to work with  */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove a styling */
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: inherit
+}
+
+/* remove animation for people who've turned them off */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01 !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01 !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+:root {
+--DarkBlue : hsl(209, 23%, 22%);
+--VeryDarkBlue : hsl(207, 26%, 17%);
+--VeryDarkBlack : hsl(200, 15%, 8%);
+--DarkGray : hsl(0, 0%, 52%);
+--VeryLightGray: hsl(0, 0%, 98%);
+--White : hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--VeryDarkBlue);
+    background-color: var(--VeryLightGray);
+}
+
+/* Header */
+.header {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: var(--VeryDarkBlue);
+    background-color: var(--White);
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    gap:1rem;
+    align-items: center;
+    padding: 2rem;      
+}
+
+.search-country {
+    max-width: 400px;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border-radius: 10px;    
+    border: none;
+}
+
+#regions {
+    border-radius: 10px;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+    border: none;
+}
+
+/* Countries Section */
+.countries-section {
+    margin: 0 auto; 
+    padding: 0 2rem; 
+}
+
+#country-template {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--VeryDarkBlue);
+    background-color: var(--White);
+}
+
+.card:hover {
+    cursor: pointer;
+}
+
+.country-details {
+    color: var(--VeryDarkBlue);
+    padding: 1rem;
+    font-weight: 600;
+    line-height: 1.7rem;
+}
+
+.country-name {
+    margin-block: 1rem;
+}
+
+.country-page {
+    margin : 2rem;
+}
+
+.back-button {
+    margin-bottom: 3rem;
+    padding: .5rem 1.5rem;  
+    border: none;
+    background-color: var(--White);
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    cursor: pointer;
+}
+
+/* Country Page */
+
+.country-details-image {
+    width: 50%;
+}
+
+.border-country {
+    padding: .5rem 1.5rem;
+    margin-inline: .2rem;
+    border-radius: 5px;
+    background-color: var(--White);
+    line-height: 2.5rem;
+}
+
+.country-details-in-page {
+    line-height: 2.5rem;
+}
+
+.country-details-name {
+    margin-block: 2rem;
+    font-size: 1.25rem;
+}
+
+
+@media (max-width: 500px) {
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .mode {
+        font-size: .75rem;
+        
+    }
+    .search-section {
+        display: block;
+    }
+
+    .country-details-image {
+        width: 100%;
+    }
+}
+
+/* Hide and Show Clicked Country */
+.hide {
+    display:none;
+}
+
+.show {
+    display: block;
+}
+
+
+/* Dark Mode  */
+
+.change-mode:hover {
+    cursor:pointer
+}
+
+.white-font {
+    color: var(--White);
+}
+
+.dark-font {
+    color: var(--VeryDarkBlack)
+}
+
+.light-bg {
+    background-color: var(--VeryLightGray);
+}
+
+.dark-bg {
+    background-color: var(--DarkBlue);
+}
+
+.very-dark-bg {
+    background-color: var(--VeryDarkBlue);
+}
+
+

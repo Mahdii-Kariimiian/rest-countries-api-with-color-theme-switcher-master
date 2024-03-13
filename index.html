@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,600;0,6..12,800;1,6..12,300;1,6..12,500;1,6..12,600;1,6..12,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="app.js" defer></script>
+    <title>Know Countries</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title"><a href="/index.html">Where in the world?</a></h1>
+            <div class="change-mode">
+                <i class="fa-solid fa-moon"></i> Dark Mode
+            </div>
+        </header>
+
+        <section class="search-section">
+            <input id="search-country" class="search-country" type="text" placeholder="Search for a country">
+            <ul class="suggestions"></ul>
+            <select name="regions" id="regions" class="search-section__regions">
+                <option value="All" class="search-section__region" selected >Filter by region</option>
+                <option value="Africa" class="search-section__region">Africa</option>
+                <option value="Americas" class="search-section__region">America</option>
+                <option value="Asia" class="search-section__region">Asia</option>
+                <option value="Europe" class="search-section__region">Europe</option>
+                <option value="Oceania" class="search-section__region">Oceania</option>
+            </select>
+        </section>
+
+        <section class="countries-section" id="countries-section">
+            <div id="country-template">
+        </section>
+    </div>
+
+    <!--  Country page -->
+        <div class="country-page ">
+            
+                <button class="back-button">
+                    Back
+                </button>
+
+            <div class="country-details-page">
+                <img class="country-details-image" src="" alt="">
+
+                <div class="country-details-in-page">
+                    <h3 class="country-details-name">Belgium</h3>
+                    <p>Population: <span class="country-details-population"></span></p>
+                    <p >Region: <span class="country-details-region"></span></p>
+                    <p>Capital: <span class="country-details-capital"></span></p>
+                    <p>Currencies <span class="country-details-currencies"></span></p>
+                    <p>Languages: <span class="country-details-languages"></span></p>
+                    <p>
+                        Border Countries: <span class="country-details-border"></span>
+                    </p>
+                </div>
+
+            </div>
+            
+        </div>
+</body>
+</html>
