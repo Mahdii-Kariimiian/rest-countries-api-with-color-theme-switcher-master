@@ -23,7 +23,7 @@ Screenshot![countries screenshot 1](https://github.com/Mahdii-Kariimiian/rest-co
 
 ## Links
 
-     - Netlify : https://whereintheworldd.netlify.app/
+   Netlify : https://whereintheworldd.netlify.app/
 
 ## Built With
  # This project was built using:
