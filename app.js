@@ -6,6 +6,7 @@ const searchCountry = document.getElementById('search-country');
 const region = document.getElementById('regions');
 const changeMode = document.querySelector('.change-mode');
 let data = [];
+let isDarkMode = false
 
 // country page 
 const countryPage = document.querySelector(".country-page")
@@ -83,6 +84,8 @@ function showCountries(data) {
 		div.appendChild(pCapital)
 
 		countryTemplate.appendChild(cardDiv)
+
+		
 	})
 }
 
@@ -95,6 +98,12 @@ function showCountries(data) {
 				return country.name.common.toLowerCase().includes(searchValue.toLowerCase())
 			})
 			showCountries(filteredCountries)
+
+			if(isDarkMode) {
+				document.querySelectorAll('.country-details').forEach(card => {
+					card.classList.toggle('white-font');
+				});
+			}
 		} else {
 			showCountries(data)
 		}
@@ -144,19 +153,9 @@ function countryDetails(country) {
 	: countryDetailsBorder.innerHTML = 'No Data for border countries'
 }
 
-//Events
-// Search
-searchCountry.addEventListener('keyup', (e) => {
-	searchedCountries(e)
-	
-})
-//Filter by Region
-region.addEventListener('change', (e) => {
-	filterByRegion(e)
-	
-})
-//Dark Mode
-changeMode.addEventListener('click', () => {
+//Dark mode Function 
+function darkMode() {
+	isDarkMode =!isDarkMode
 	document.body.classList.toggle("very-dark-bg")
 	document.body.classList.toggle("white-font")
 	header.classList.toggle("white-font")
@@ -182,6 +181,22 @@ changeMode.addEventListener('click', () => {
 	})
 	region.classList.toggle("white-font")
 	region.classList.toggle("dark-bg")
+}
+
+//Events
+// Search
+searchCountry.addEventListener('keyup', (e) => {
+	searchedCountries(e)
+	
+})
+//Filter by Region
+region.addEventListener('change', (e) => {
+	filterByRegion(e)
+	
+})
+//Dark Mode
+changeMode.addEventListener('click', () => {
+	darkMode()
 })
 // Back Button
 backButton.addEventListener('click', () => {
