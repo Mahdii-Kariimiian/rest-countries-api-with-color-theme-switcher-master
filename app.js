@@ -171,59 +171,33 @@ function countryDetails(country) {
 
 //Dark mode Function 
 function darkMode() {
-	if (!isDarkMode) {
-		document.body.classList.add("very-dark-bg")
-		document.body.classList.add("white-font")
-		header.classList.add("white-font")
-		header.classList.add("dark-bg")
-		searchSection.classList.add("white-font")
-		searchSection.classList.add("very-dark-bg")
-		countriesSection.classList.add("white-font")
-		countriesSection.classList.add("very-dark-bg")
-		searchCountry.classList.add("white-font")
-		searchCountry.classList.add("dark-bg")
+	
+		document.body.classList.toggle("very-dark-bg")
+		document.body.classList.toggle("white-font")
+		header.classList.toggle("white-font")
+		header.classList.toggle("dark-bg")
+		searchSection.classList.toggle("white-font")
+		searchSection.classList.toggle("very-dark-bg")
+		countriesSection.classList.toggle("white-font")
+		countriesSection.classList.toggle("very-dark-bg")
+		searchCountry.classList.toggle("white-font")
+		searchCountry.classList.toggle("dark-bg")
 		document.querySelectorAll('.card').forEach(card => {
-			card.classList.add('dark-bg');
+			card.classList.toggle('dark-bg');
 		});
 		document.querySelectorAll('.country-details').forEach(card => {
-			card.classList.add('white-font');
+			card.classList.toggle('white-font');
 		});
-		backButton.classList.add("white-font")
-		backButton.classList.add("dark-bg")
+		backButton.classList.toggle("white-font")
+		backButton.classList.toggle("dark-bg")
 	
 		document.querySelectorAll('.border-country').forEach(card => {
-			card.classList.add('white-font');
-			card.classList.add('dark-bg');
+			card.classList.toggle('white-font');
+			card.classList.toggle('dark-bg');
 		})
-		region.classList.add("white-font")
-		region.classList.add("dark-bg")
-	} else {
-		document.body.classList.remove("very-dark-bg")
-		document.body.classList.remove("white-font")
-		header.classList.remove("white-font")
-		header.classList.remove("dark-bg")
-		searchSection.classList.remove("white-font")
-		searchSection.classList.remove("very-dark-bg")
-		countriesSection.classList.remove("white-font")
-		countriesSection.classList.remove("very-dark-bg")
-		searchCountry.classList.remove("white-font")
-		searchCountry.classList.remove("dark-bg")
-		document.querySelectorAll('.card').forEach(card => {
-			card.classList.remove('dark-bg');
-		});
-		document.querySelectorAll('.country-details').forEach(card => {
-			card.classList.remove('white-font');
-		});
-		backButton.classList.remove("white-font")
-		backButton.classList.remove("dark-bg")
+		region.classList.toggle("white-font")
+		region.classList.toggle("dark-bg")
 	
-		document.querySelectorAll('.border-country').forEach(card => {
-			card.classList.remove('white-font');
-			card.classList.remove('dark-bg');
-		})
-		region.classList.remove("white-font")
-		region.classList.remove("dark-bg")
-	}
 }
 
 //Events
